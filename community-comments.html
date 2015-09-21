@@ -7,6 +7,7 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
 <link rel="stylesheet" type="text/css" href="assets/css/jPushMenu.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <style>
   body { margin:0; padding:0;font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
   #main{margin:0; padding:0;width:100%;}
@@ -38,6 +39,11 @@ a:link {
 <style>
 
 .navbar{z-index:10;margin-bottom:0;}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 button {
   display:block;
@@ -234,9 +240,10 @@ fieldset { width:240px;}
             <ul class='clearfix alt'>
               <li><span style='background:darkslategrey;'></span> Project Limits</li>
             </ul>
-              <small>Source: <a href="http://www.iconeng.com">ICON Engineering</a></small>
+              <small>Source: <a href="http://www.iconeng.com">ICON Engineering</a></small> -->
     </div>  
-    <h3>Layers</h3> -->
+    <h3>Layers</h3>
+    <a class="active" id="overviewLayer" href="#">Project Area</a> 
 </nav>
 <div id='main'>
 <div class="container-fluid">
@@ -299,18 +306,70 @@ color = '#' + [
         (~~(Math.random() * 16)).toString(16),
         (~~(Math.random() * 16)).toString(16)].join('');
 
-var map = L.mapbox.map('map','iconeng.kei97ole',{
+var map = L.mapbox.map('map','iconeng.ld19b8nf',{
       attributionControl: false,
       infoControl: true,
       maxZoom:19
     })
       .addControl(L.mapbox.geocoderControl('mapbox.places-v1'))
-      .setView([40.415,-104.686], 14);
+      .setView([40.4221,-104.6998], 14);
 
 var layers = document.getElementById('myNavmenu');
 
-// addLayer(L.mapbox.tileLayer('iconeng.BoulderCreek_Base'), 'Existing SFHA', 1);
+var cartoDBoverview = null;
 
+  // Set your CartoDB Username
+  var cartoDBUsername = "iconeng";
+
+  // Write SQL Selection Query to be Used on CartoDB Table
+  var overviewQuery = "SELECT * FROM greeley_basin_overview WHERE name IN ('Downtown and North Greeley Basin')";
+
+  function overviewStyle(feature) {
+           return {
+             weight: 2.75,
+             fillOpacity: 0.05,
+             fillColor: '#eee',
+             color: 'steelblue',
+             opacity:.95,
+             clickable:false
+           };
+         }
+
+   function getOverview(){
+    if(map.hasLayer(cartoDBoverview)){
+        map.removeLayer(cartoDBoverview);
+    };
+    $.getJSON("https://"+cartoDBUsername+".cartodb.com/api/v2/sql?format=GeoJSON&q="+ overviewQuery, function(data) {
+      cartoDBoverview = L.geoJson(data,{
+        style: overviewStyle,
+        onEachFeature: function (feature, layer) {
+                layer.cartodb_id=feature.properties.cartodb_id;
+            }
+      }).addTo(map);
+    });
+  };
+
+  // Run showAll function automatically when document loads
+  $( document ).ready(function() {
+    getOverview();
+  });
+
+  var overviewLink = document.getElementById("overviewLayer");
+
+  overviewLink.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          if (map.hasLayer(cartoDBoverview)) {
+              map.removeLayer(cartoDBoverview);
+              this.className = '';
+          } else {
+              map.addLayer(cartoDBoverview);
+              this.className = 'active';
+          }
+      };
+
+// addLayer(L.mapbox.tileLayer('iconeng.BoulderCreek_Base'), 'Existing SFHA', 1);         
 
 function addLayer(layer, name, zIndex) {
     layer
@@ -371,7 +430,7 @@ function waitLayer(layer, name, zIndex) {
     layers.appendChild(link);
 }
 
-var marker = L.marker([40.415,-104.686], {
+var marker = L.marker([40.4221,-104.6998], {
     draggable: true,
     icon: L.mapbox.marker.icon({
         'marker-color': '#e53338'
