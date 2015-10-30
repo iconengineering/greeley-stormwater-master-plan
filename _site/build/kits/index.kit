@@ -1,0 +1,85 @@
+<!-- @include "partials/header" -->
+
+        <div class="container">
+
+            <div class="page-header">
+                <h1>Greeley Stormwater Master Plan</h1>
+                <p class="lead">Prepared By ICON Engineering for the City of Greeley</p>
+            </div>
+
+        </div>
+        <!--main-->
+<div class="container">
+	<div class="row">
+          <!--left-->
+        <div class="col-md-4" id="leftCol">
+            <ul class="nav nav-stacked" id="sidebar">
+              <li><a href="#background">Background</a></li>
+              <li><a href="#project-map">Project Map</a></li>
+              <li><a href="#project-info">Project Info</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#project-team">Project Team</a></li>
+              <li><a href="#">Comment Map</a></li>
+              <a href="http://www.greeleygov.com" target="blank"><img style="margin-top:35px;margin-bottom:15px;" class="img-responsive" src="http://placehold.it/300x75?text=Greeley+Logo"></a>
+              <a href="http://www.iconeng.com" target="blank"><img class="img-responsive" src="assets/img/icon.png"></a>
+            </ul>
+        </div>
+        <!--/left-->
+        <!--right-->
+      <div class="col-md-8">
+        <h2 id="background">Background</h2>
+        <hr>
+          <p>
+            <!-- @include "markdown/background.html" -->
+          </p>
+
+        <h2 id="project-map">Project Map</h2>
+
+          <div class="thumbnail">
+            <a data-html"true" data-title="Project Map" data-toggle="lightbox" href="http://placehold.it/800x800?text=Project+Map">
+              <img src="http://placehold.it/800x800?text=Project+Map" alt="Project Map">
+            </a>
+           </div>
+
+        <h2 id="project-info">Project Info</h2>
+
+          <ul class="nav nav-tabs" role="tablist">
+             <li role="presentation" class="active"><a href="#schedule" aria-controls="schedule" role="tab" data-toggle="tab">Schedule & Report</a></li>
+             <li role="presentation"><a href="#meetings" aria-controls="meetings" role="tab" data-toggle="tab">Meetings</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="schedule" class="tab-pane fade in active">
+              <!-- @include "markdown/schedule.html" -->
+            </div>
+            <div id="meetings" class="tab-pane fade">
+              <!-- @include "markdown/meetings.html" -->
+            </div>
+          </div>
+          <hr>
+
+        <h2 id="contact">Contact</h2>
+        <hr>
+          <p>
+          Info for Comment Map and Google contact form go here...</p>
+
+
+        <h2 id="project-team">Project Team</h2>
+
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#icon" aria-controls="icon" role="tab" data-toggle="tab">Icon Engineering</a></li>
+            <li role="presentation"><a href="#greeley" aria-controls="greeley" role="tab" data-toggle="tab">City of Greeley</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="icon" class="tab-pane fade in active">
+              <!-- @include "markdown/icon.html" -->
+            </div>
+            <div id="greeley" class="tab-pane fade">
+              <!-- @include "markdown/greeley.html" -->
+            </div>
+          </div>
+
+      </div><!--/right-->
+  	</div><!--/row-->
+</div><!--/container-->
+
+<!-- @include "partials/footer" -->
