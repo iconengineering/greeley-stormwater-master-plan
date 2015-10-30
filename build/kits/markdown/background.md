@@ -1,3 +1,3 @@
 The Downtown and North Greeley Basin, approximately 5.2 square miles in drainage area, generally slopes from the south near the University of Northern Colorado campus north to the Cache la Poudre River.  The existing storm drain system is undersized throughout the basin, with the frequent flooding causing damages to buildings throughout the watershed, including City Hall in 2001.   
 
-The focus of the study is to is to produce a comprehensive storm drainage master plan to identify and prioritize capital improvement projects, improve water quality, and guide redevelopment within the Downtown and North Greeley Basin.
+The focus of the study is to produce a comprehensive storm drainage master plan to identify and prioritize capital improvement projects, improve water quality, and guide redevelopment within the Downtown and North Greeley Basin.
