@@ -60,12 +60,86 @@ author: bootply.com
   margin-right: -5px;
 }
 
-.navbar-brand:hover, .navbar-nav a:hover {
-  border-bottom: 2px solid #aaf;
+#sidebar img {
+  max-width: 200px;
 }
 
-.navbar-nav a:hover {
-  padding-bottom:13px;
+.navbar .navbar-nav {
+    background-color: @navbar-inverse-bg;
+    margin-top:0;
+}
+
+.navbar-nav li a:before, .navbar-nav li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s
+}
+
+.navbar-nav li a:before {
+    height:2px;
+    background: transparent
+}
+
+.navbar-nav li a:after {
+    height:0;
+    background: @gray-lighter
+}
+
+.navbar-nav li a:active:after, .navbar-nav li a:hover:after {
+    height:2px;
+}
+
+.nofx li a:active:after, .nofx li a:hover:after {
+    height:0;
+}
+
+.navbar-brand {
+    font-weight: 300;
+    height: 50px;
+    line-height: 22px;
+    padding: 14px 15px;
+}
+
+.navbar-brand-sm {
+  font-size: @font-size-h4
+}
+
+.navbar-brand-xs {
+  font-size: @font-size-base
+}
+
+.navbar-brand:before, .navbar-brand:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 390px;
+    height: 0px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s
+}
+
+.navbar-brand:before {
+    height:2px;
+    background: transparent
+}
+
+.navbar-brand:after {
+    height:0;
+    background: @gray-lighter
+}
+
+.navbar-brand:active:after, .navbar-brand:hover:after {
+    height:2px;
 }
 
 .tab-content {

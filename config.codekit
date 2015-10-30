@@ -89,6 +89,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_site\/assets\/css\/jPushMenu.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/assets\/css\/jPushMenu.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_site\/assets\/css\/theme.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -97,6 +106,28 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/assets\/img\/Greeley-Overview.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.81089e+06,
+		"inputAbbreviatedPath": "\/_site\/assets\/img\/Greeley-Overview.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/img\/Greeley-Overview.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/img\/greeley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 178833,
+		"inputAbbreviatedPath": "\/_site\/assets\/img\/greeley.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/img\/greeley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/_site\/assets\/img\/icon.png": {
 		"fileType": 32768,
@@ -131,6 +162,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_site\/assets\/js\/jPushMenu.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/assets\/js\/jPushMenu.js",
+		"outputAbbreviatedPath": "\/_site\/assets\/js\/min\/jPushMenu-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_site\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -152,6 +194,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/_site\/build\/kits\/community-comments.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/build\/kits\/community-comments.kit",
+		"outputAbbreviatedPath": "\/_site\/build\/kits\/community-comments.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/_site\/build\/kits\/index.kit": {
 		"fileType": 2048,
@@ -2358,11 +2409,11 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/_site\/index.html": {
+	"\/_site\/community-comments.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/index.html",
+		"inputAbbreviatedPath": "\/_site\/community-comments.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -2459,7 +2510,7 @@
 		},
 	"\/assets\/css\/app.css": {
 		"fileType": 16,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/app.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -2475,6 +2526,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/jPushMenu.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/jPushMenu.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/theme.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -2483,6 +2543,28 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/img\/Greeley-Overview.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.81089e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/Greeley-Overview.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/Greeley-Overview.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/greeley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 178833,
+		"inputAbbreviatedPath": "\/assets\/img\/greeley.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/greeley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/assets\/img\/icon.png": {
 		"fileType": 32768,
@@ -2517,6 +2599,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/jPushMenu.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/jPushMenu.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/jPushMenu-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -2538,6 +2631,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/build\/kits\/community-comments.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/kits\/community-comments.kit",
+		"outputAbbreviatedPath": "\/build\/kits\/community-comments.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/build\/kits\/index.kit": {
 		"fileType": 2048,
@@ -5755,7 +5857,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/styles\/less\/app.less",
-		"outputAbbreviatedPath": "\/app\/assets\/css\/app.css",
+		"outputAbbreviatedPath": "\/assets\/css\/app.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
@@ -6056,11 +6158,11 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/index.html": {
+	"\/community-comments.html": {
 		"fileType": 8192,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
+		"inputAbbreviatedPath": "\/community-comments.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
