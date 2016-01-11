@@ -31,7 +31,7 @@ a:link {
 </style>
 </head>
 <body>
- 
+
   <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
   <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
@@ -213,7 +213,7 @@ fieldset { width:240px;}
     }
   ul {
   list-style-type:none;
-  }  
+  }
   .xs-legend{
     background-color:#999;
     color:#fff;
@@ -223,14 +223,14 @@ fieldset { width:240px;}
 </style>
 
 <nav id="myNavmenu" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
-    
+
     <div class="hidden-md hidden-lg xs-legend col-sm-12">
       <b>Instructions:</b>
         <p><small>Please drag the <span style="color: #e53338"><b>RED</b></span> marker to your location of interest (you can zoom and pan the map in order to accurately place your marker), and fill out the form in the popup. Please note that once you submit, the marker will turn <span style="color: #FFA6A6"><b>PINK</b></span> and is no longer movable.</small></p>
         <p><small>Your comment can be seen in the map, but your personal information will not be visible to the public.</small></p>
         <p><small>If you wish to make additional comments, drag the <span style="color: #e53338"><b>RED</b></span> marker again and a new form will become available.</small></p>
         <p><small>Layers can be turned on and off using the buttons below.</small></p>
-    
+
 <!--      <b>Legend:</b>
         <ul class='legend clearfix'>Effective Flood Hazards
               <li><span style='background:#385777;'></span> Floodway</li>
@@ -241,9 +241,9 @@ fieldset { width:240px;}
               <li><span style='background:darkslategrey;'></span> Project Limits</li>
             </ul>
               <small>Source: <a href="http://www.iconeng.com">ICON Engineering</a></small> -->
-    </div>  
+    </div>
     <h3>Layers</h3>
-    <a class="active" id="overviewLayer" href="#">Project Area</a> 
+    <a class="active" id="overviewLayer" href="#">Project Area</a>
 </nav>
 <div id='main'>
 <div class="container-fluid">
@@ -256,7 +256,7 @@ fieldset { width:240px;}
   <div class="hidden-xs"><h3>Greeley Stormwater Master Plan - Community Comments</h3></div>
   <div class="visible-xs small-header"><h6>Greeley Stormwater Master Plan - Community Comments</h6></div>
   </div>
- 
+
 <div id='map'>
   <div class="visible-md visible-lg">
   <div class="bs-docs-section col-md-3 instructions">
@@ -295,11 +295,11 @@ fieldset { width:240px;}
 </div>
 </div>
 </div>
-</div> 
+</div>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiaWNvbmVuZyIsImEiOiJQVEItMndNIn0.OGqDLfQCZhMzdgYViGKHGw';
 
-var base = new Firebase('https://greeley-community.firebaseio.com/'),
+var base = new Firebase('https://greeley-community.firebaseio.com/data/'),
 
 color = '#' + [
         (~~(Math.random() * 16)).toString(16),
@@ -369,14 +369,14 @@ var cartoDBoverview = null;
           }
       };
 
-// addLayer(L.mapbox.tileLayer('iconeng.BoulderCreek_Base'), 'Existing SFHA', 1);         
+// addLayer(L.mapbox.tileLayer('iconeng.BoulderCreek_Base'), 'Existing SFHA', 1);
 
 function addLayer(layer, name, zIndex) {
     layer
         .setZIndex(zIndex)
         .addTo(map);
-        
-        
+
+
 
     // Create a simple layer switcher that
     // toggles layers on and off.
@@ -404,8 +404,8 @@ function addLayer(layer, name, zIndex) {
 function waitLayer(layer, name, zIndex) {
     layer
         .setZIndex(zIndex);
-        
-        
+
+
 
     // Create a simple layer switcher that
     // toggles layers on and off.
@@ -475,7 +475,7 @@ base.limit(200).on('child_added', function(snapshot) {
             l.setZIndexOffset(-1000)
             // And each marker should have a label with its title.
             var geojson = l.toGeoJSON();
-            
+
         })
         .addTo(map);
 });
