@@ -327,9 +327,9 @@ var cartoDBoverview = null;
   function overviewStyle(feature) {
            return {
              weight: 2.75,
-             fillOpacity: 0.05,
+             fillOpacity: 0,
              fillColor: '#eee',
-             color: 'steelblue',
+             color: '#ffd700',
              opacity:.95,
              clickable:false
            };
@@ -369,7 +369,7 @@ var cartoDBoverview = null;
           }
       };
 
-// addLayer(L.mapbox.tileLayer('iconeng.BoulderCreek_Base'), 'Existing SFHA', 1);
+addLayer(L.mapbox.tileLayer('iconeng.28afab33'), 'Flow Depth', 1);
 
 function addLayer(layer, name, zIndex) {
     layer
