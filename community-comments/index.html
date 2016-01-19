@@ -193,11 +193,17 @@ fieldset { width:240px;}
     .legend span {
         display:block;
         float:left;
-        height:15px;
+        height:18px;
         width:32px;
         text-align:center;
         font-size:9px;
         color:#808080;
+  }
+  .legend li {
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
   }
   .legend span{margin-right:19px;opacity:.7;}
   .legend img{opacity:.5;}
@@ -232,7 +238,7 @@ fieldset { width:240px;}
         <p><small>Layers can be turned on and off using the buttons below. Flow Depths will appear at zoom levels 16 and greater.</small></p>
 
      <b>Legend:</b>
-            <ul class='legend clearfix'>Flow Depth
+            <ul class='legend clearfix'><b>Flow Depth</b>
               <li><span style='background:#ffffcc;'></span> Shallow</li>
               <li><span style='background:#41b6c4;'></span> Moderate</li>
               <li><span style='background:#253494;'></span> Severe</li>
@@ -279,7 +285,7 @@ fieldset { width:240px;}
             <h3 class="panel-lefttitle">Legend</h3>
         </div>
         <div class="panel-rightbody">
-            <ul class='legend clearfix'>Flow Depth
+            <ul class='legend clearfix'><b>Flow Depth</b>
               <li><span style='background:#ffffcc;'></span> Shallow</li>
               <li><span style='background:#41b6c4;'></span> Moderate</li>
               <li><span style='background:#253494;'></span> Severe</li>
